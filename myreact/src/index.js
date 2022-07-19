@@ -1,16 +1,18 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App";
-import reportWebVitals from "./reportWebVitals";
+import ReactDOM from "react-dom";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+// const element = React.createElement("h2", { title: "Hello World" }, [
+//   "Hello World",
+//   React.createElement("span", { title: "Hello Span" }, "Hello Span"),
+// ]);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
+setInterval(() => {
+  const element = (
+    <h2 title="hello world">
+      Hello React! <span title="Hello span">{new Date().toLocaleTimeString()}</span>
+    </h2>
+  );
+  ReactDOM.render(element, document.getElementById('root'));
+}, 1000)
+
