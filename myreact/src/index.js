@@ -1,12 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-function Clock({locale}) {
-  return (
-    <h2>
-      Hello <span>{new Date().toLocaleTimeString(locale)}</span>
-    </h2>
-  )
+class Clock extends React.Component{
+  render() {
+    return (
+      <h2>
+        Hello {new Date().toLocaleTimeString(this.props.locale)}
+      </h2>
+    )
+  }
 }
 
-ReactDOM.render(<Clock locale="bn-BD" />, document.getElementById('root'));
+ReactDOM.render(<Clock locale='bn-BD' />, document.getElementById('root'))
