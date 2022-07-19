@@ -1,18 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-// const element = React.createElement("h2", { title: "Hello World" }, [
-//   "Hello World",
-//   React.createElement("span", { title: "Hello Span" }, "Hello Span"),
-// ]);
-
-
-setInterval(() => {
-  const element = (
-    <h2 title="hello world">
-      Hello React! <span title="Hello span">{new Date().toLocaleTimeString()}</span>
+function Clock({locale}) {
+  return (
+    <h2>
+      Hello <span>{new Date().toLocaleTimeString(locale)}</span>
     </h2>
-  );
-  ReactDOM.render(element, document.getElementById('root'));
-}, 1000)
+  )
+}
 
+ReactDOM.render(<Clock locale="bn-BD" />, document.getElementById('root'));
