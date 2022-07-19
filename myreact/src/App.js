@@ -1,9 +1,16 @@
 import React from "react";
 
-const App = () => {
-  const name = "Tusar";
-  const element = <h1>Hello, {name}</h1>;
-  return <div>{element}</div>;
+const formatUser = user => {
+  return `${user.firstName} ${user.lastName}` 
+}
+
+const user = {
+  firstName: 'Tusar',
+  lastName: 'Ali'
+}
+
+const App = () => {  
+  return <h2>{formatUser(user)}.</h2>;
 };
 
 export default App;
