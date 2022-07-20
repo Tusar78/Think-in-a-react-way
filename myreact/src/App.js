@@ -15,7 +15,7 @@ const App = () => {
   return (
     <>
       <Comment comment={comment}></Comment>
-      <Clock></Clock>
+      <Clock locale="bn-BD"></Clock>
     </>
   );
 };
