@@ -1,6 +1,6 @@
 import React from "react";
-import Clock from "./Components/Clock/Clock";
 import Comment from "./Components/Comment/Comment";
+import HandleEvent from "./Components/HandleEvent/HandleEvent";
 
 const comment = {
   date: new Date(),
@@ -15,7 +15,7 @@ const App = () => {
   return (
     <>
       <Comment comment={comment}></Comment>
-      <Clock></Clock>
+      <HandleEvent></HandleEvent>
     </>
   );
 };
