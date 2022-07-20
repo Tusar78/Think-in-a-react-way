@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
 
 class HandleEvent extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {date: new Date(), locale: 'en-US'};
-    this.clickHandle = this.clickHandle.bind(this)
-  }
+  state = {date: new Date(), locale: 'en-US'}
 
   componentDidMount = () => {
     this.timerID = setInterval(() => this.tick(), 1000);
@@ -23,19 +19,10 @@ class HandleEvent extends Component {
     })
   }
 
-  // clickHandle = () => {
-  //   console.log('Hello React!');
-  //   this.setState((state, props) => {
-  //     return {
-  //       locale: 'bn-BD'
-  //     }
-  //   })
-  // }
-
-  clickHandle() {
+  clickHandle = (locale) => {
     this.setState((state, props) => {
       return {
-        locale: 'bn-BD'
+        locale,
       }
     })
   }
@@ -46,7 +33,7 @@ class HandleEvent extends Component {
       <div>
         <h2>Hello, React!</h2>
         <h3>It is {date.toLocaleTimeString(locale)}</h3>
-        <button onClick={this.clickHandle}>Click</button>
+        <button onClick={this.clickHandle.bind(this, 'bn-BD')}>Click</button>
       </div>
     );
   }
