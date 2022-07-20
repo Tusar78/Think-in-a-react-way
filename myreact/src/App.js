@@ -1,5 +1,4 @@
 import React from "react";
-import Clock from "./Components/Clock/Clock";
 import Comment from "./Components/Comment/Comment";
 
 const comment = {
@@ -15,7 +14,6 @@ const App = () => {
   return (
     <>
       <Comment comment={comment}></Comment>
-      <Clock locale="bn-BD"></Clock>
     </>
   );
 };
