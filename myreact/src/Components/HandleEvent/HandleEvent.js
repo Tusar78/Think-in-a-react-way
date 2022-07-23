@@ -1,15 +1,16 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class HandleEvent extends Component {
-  state = {date: new Date(), locale: 'en-US'}
-
-  componentDidMount = () => {
-    this.timerID = setInterval(() => this.tick(), 1000);
+  constructor(props) {
+    super(props);
+    this.state = { date: new Date() };
   }
 
-  componentWillMount = () => {
-    clearInterval(this.timerID)
+  componentDidMount() {
+    this.timerID = setInterval(this.tick, 1000);
   }
+
+  componentWillUnmount = () => clearInterval(this.timerID);
 
   tick = () => {
     this.setState((state, props) => {
@@ -18,22 +19,13 @@ class HandleEvent extends Component {
       }
     })
   }
-
-  clickHandle = (locale) => {
-    this.setState((state, props) => {
-      return {
-        locale,
-      }
-    })
-  }
+    
 
   render() {
-    const {date, locale} = this.state;
     return (
       <div>
-        <h2>Hello, React!</h2>
-        <h3>It is {date.toLocaleTimeString(locale)}</h3>
-        <button onClick={this.clickHandle.bind(this, 'bn-BD')}>Click</button>
+        <h2>Hello, I'm Tusar</h2>
+        <h4>It's: {this.state.date.toLocaleTimeString()}</h4>
       </div>
     );
   }
