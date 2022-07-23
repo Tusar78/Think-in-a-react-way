@@ -1,5 +1,6 @@
 import React from "react";
 import Comment from "./Components/Comment/Comment";
+import Form from "./Components/Form/Form";
 import HandleEvent from "./Components/HandleEvent/HandleEvent";
 
 const comment = {
@@ -16,6 +17,7 @@ const App = () => {
     <>
       <Comment comment={comment}></Comment>
       <HandleEvent></HandleEvent>
+      <Form></Form>
     </>
   );
 };
