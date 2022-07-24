@@ -1,11 +1,11 @@
 import React from "react";
 import './App.css'
-import Page from "./Components/Page/Page";
+import FromControl from "./Components/FormControl/FromControl";
 
 const App = () => {
   return (
     <>
-      <Page />
+      <FromControl></FromControl>
     </>
   );
 };
