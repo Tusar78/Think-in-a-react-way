@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f7f7f7;
+  font-family: Fira Code, monospace;
+  font-size: 1rem;
+  color: #02000e;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
