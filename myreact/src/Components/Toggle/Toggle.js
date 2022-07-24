@@ -5,8 +5,21 @@ class Toggle extends Component {
     super(props);
 
     this.state = {isToggleOn: true}
-    this.handleClick = this.handleClick.bind(this);
+    // this.handleClick = this.handleClick.bind(this);
   }
+
+  // handleClick() {
+  //   this.setState((prevState, props) => {
+  //     console.log(this);
+  //     return {
+  //       isToggleOn: !prevState.isToggleOn
+  //     }
+  //   })
+  // }
+
+  // handleClick = () => {
+  //   console.log('hello world', this);
+  // }
 
   handleClick() {
     this.setState((prevState, props) => {
@@ -18,7 +31,7 @@ class Toggle extends Component {
   render() {
     return (
       <div>
-        <button style={{cursor: 'pointer'}} onClick={this.handleClick}>{this.state.isToggleOn ? 'ON' : 'OFF'}</button>
+        <button style={{cursor: 'pointer'}} onClick={this.handleClick.bind(this)}>{this.state.isToggleOn ? 'ON' : 'OFF'}</button>
       </div>
     );
   }
