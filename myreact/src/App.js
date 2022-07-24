@@ -1,5 +1,5 @@
 import React from "react";
-import Greeting from "./Components/Greeting/Greeting";
+import LoginControl from "./Components/LoginControl/LoginControl";
 
 // const comment = {
 //   date: new Date(),
@@ -13,7 +13,7 @@ import Greeting from "./Components/Greeting/Greeting";
 const App = () => {
   return (
     <>
-      <Greeting isLoggedIn={true}></Greeting>
+      <LoginControl></LoginControl>
     </>
   );
 };

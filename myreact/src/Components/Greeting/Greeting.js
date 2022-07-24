@@ -1,10 +1,10 @@
 import React from 'react';
 
-const UserGreeting = () => {
+const UserGreeting = (props) => {
   return <h2>Welcome back!</h2>
 }
 
-const GuestGreeting = () => {
+const GuestGreeting = (props) => {
   return <h2>Please Sign In.</h2>
 }
 
