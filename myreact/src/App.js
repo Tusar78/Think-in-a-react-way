@@ -1,11 +1,11 @@
 import React from "react";
 import './App.css'
-import FromControl from "./Components/FormControl/FromControl";
+import ListItems from "./Components/PracticeList/ListItems";
 
 const App = () => {
   return (
     <>
-      <FromControl></FromControl>
+      <ListItems />
     </>
   );
 };
