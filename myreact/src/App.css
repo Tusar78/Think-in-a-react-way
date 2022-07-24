@@ -24,3 +24,23 @@ img {
   height: auto;
   display: block;
 }
+
+.banner {
+  background-color: royalblue;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+button {
+  padding: .625rem 1.5rem;
+  border: 1px solid royalblue;
+  background: transparent;
+  color: royalblue;
+  border-radius: .2rem;
+  font-family: Fira Code, monospace;
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 1rem;
+  cursor: pointer;
+}
