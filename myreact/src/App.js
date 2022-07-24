@@ -1,7 +1,6 @@
 import React from "react";
 import Comment from "./Components/Comment/Comment";
-import Form from "./Components/Form/Form";
-import HandleEvent from "./Components/HandleEvent/HandleEvent";
+import Toggle from "./Components/Toggle/Toggle";
 
 const comment = {
   date: new Date(),
@@ -16,8 +15,7 @@ const App = () => {
   return (
     <>
       <Comment comment={comment}></Comment>
-      <HandleEvent></HandleEvent>
-      <Form></Form>
+      <Toggle></Toggle>
     </>
   );
 };
