@@ -1,10 +1,12 @@
 import React from "react";
 import './App.css'
+import Mailbox from "./Components/Mailbox/Mailbox";
 
 const App = () => {
+  const message = ['React', 'Redux', 'Svelte', 'ES2021']
   return (
     <>
-    <h1>Hello World</h1>
+      <Mailbox message={message} />
     </>
   );
 };
