@@ -58,3 +58,11 @@ input {
   outline: none;
   border-radius: .2rem;
 }
+
+.display__input {
+  padding: .5rem 1rem;
+  background-color: #dfd6ff;
+  margin-top: 0.5rem;
+  border-radius: .2rem;
+  width: max-content;
+}

@@ -3,29 +3,33 @@ import React, { Component } from "react";
 class Form extends Component {
   constructor(props) {
     super(props);
-
-    this.handleChange = this.handleChange.bind(this)
     this.state = { value: "" };
   }
 
-  handleChange(event) {
+  handleChange = (e) => {
     this.setState((prevState, props) => {
       return {
-        value: event.target.value,
+        value: e.target.value,
       };
     });
-  }
+  };
   render() {
     const { value } = this.state;
+    let display = (value && value.trim().length > 0)
+                      ? <p className="display__input">{value}</p>
+                      : null;
+
     return (
       <form>
         <input
           type="text"
-          name="userName"
+          name="username"
           id="user-name"
           value={value}
           onChange={this.handleChange}
         />
+
+        {display}
       </form>
     );
   }
