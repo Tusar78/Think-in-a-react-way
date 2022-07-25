@@ -47,6 +47,14 @@ button {
 
 .container {
   max-width: 980px;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding: 1rem;
+}
+
+input {
+  border: 1px solid #cacaca;
+  padding: .5rem 1rem;
+  font-size: 1rem;
+  font-family: Fira Code, monospace;
+  outline: none;
+  border-radius: .2rem;
 }
