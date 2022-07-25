@@ -51,7 +51,8 @@ button {
 }
 
 input,
-textarea {
+textarea,
+select {
   display: block;
   border: 1px solid #cacaca;
   padding: .5rem 1rem;
@@ -60,6 +61,16 @@ textarea {
   outline: none;
   border-radius: .2rem;
   margin-bottom: .5rem;
+}
+
+.terms__condition {
+  display: flex;
+}
+
+.terms__condition > input[type="checkbox"] {
+  width: 1.3rem;
+  height: 1.3rem;
+  margin-right: .5rem;
 }
 
 
