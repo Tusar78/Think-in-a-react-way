@@ -1,11 +1,11 @@
 import React from "react";
 import './App.css'
-import ListItems from "./Components/PracticeList/ListItems";
+import Clock from "./Components/Clock/Clock";
 
 const App = () => {
   return (
     <>
-      <ListItems />
+      <Clock />
     </>
   );
 };
