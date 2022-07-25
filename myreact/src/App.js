@@ -1,11 +1,11 @@
 import React from "react";
 import './App.css'
-import Form from "./Components/Form/Form";
+import Calculator from "./Components/Calculator/Calculator";
 
 const App = () => {
   return (
     <div className="container">
-      <Form />
+      <Calculator />
     </div>
   );
 };

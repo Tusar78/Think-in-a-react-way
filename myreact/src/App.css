@@ -73,6 +73,12 @@ select {
   margin-right: .5rem;
 }
 
+fieldset {
+  border-color: #d0e5ff;
+  border-radius: 0.2rem;
+  padding: 0.625rem 1rem;
+}
+
 
 .display__input {
   padding: .5rem 1rem;
