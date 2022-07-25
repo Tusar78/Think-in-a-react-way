@@ -50,14 +50,18 @@ button {
   padding: 1rem;
 }
 
-input {
+input,
+textarea {
+  display: block;
   border: 1px solid #cacaca;
   padding: .5rem 1rem;
   font-size: 1rem;
   font-family: Fira Code, monospace;
   outline: none;
   border-radius: .2rem;
+  margin-bottom: .5rem;
 }
+
 
 .display__input {
   padding: .5rem 1rem;
