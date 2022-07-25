@@ -1,9 +1,12 @@
 import React from 'react';
 
-const Button = () => {
+const Button = ({onClick, locale}) => {
   return (
-    <button>
-      Change
+    <button onClick={() => onClick(locale)}>
+      {
+        locale === 'bn-BD' ? 'Change' : 'পরিবর্তন করুন।'
+      }
+      
     </button>
   );
 };
