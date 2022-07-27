@@ -18,8 +18,13 @@ class Form extends Component {
   handleChange(event) {
     // console.log(event.target);
     console.log(event.target.type);
-    const eventType = event.target.type;
-    switch (eventType) {
+    const eventTarget = event.target;
+    const value = eventTarget.type === 'checkbox' ? eventTarget.checked : eventTarget.value;
+    const name = eventTarget.name;
+    this.setState({
+      [name] : value
+    })
+    switch (eventTarget.type) {
       case "text":
         this.setState((prevState, props) => {
           return {
@@ -77,6 +82,7 @@ class Form extends Component {
             name="isGoing"
             id="isGoing"
             checked={isGoing}
+            onChange={this.handleChange}
           />
         </label>
 
@@ -87,6 +93,7 @@ class Form extends Component {
             name="numberOfGuests"
             id="numberOfGuests"
             value={numberOfGuests}
+            onChange={this.handleChange}
           />
         </label>
         <label htmlFor="description">
