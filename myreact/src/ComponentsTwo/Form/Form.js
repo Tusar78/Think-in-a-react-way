@@ -7,6 +7,7 @@ class Form extends Component {
     this.state = {
       userName: "",
       message: "",
+      flavor: "",
     };
     this.handleChange = this.handleChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
@@ -27,20 +28,23 @@ class Form extends Component {
       case "textarea":
         this.setState({ message: event.target.value });
         break;
+      case "select-one":
+        this.setState({ flavor: event.target.value });
+        break;
       default:
         break;
     }
   }
 
   onSubmit(event) {
-    const { userName, message } = this.state;
-    event.preventDefault();
+    const { userName, message, flavor } = this.state;
     const isUserName = userName ? `A name was submitted ${userName}` : "";
-    console.log(`${isUserName} and ${message}`);
+    console.log(`${isUserName} and i love ${flavor}. ${message}`);
     this.setState({ userName: "" });
+    event.preventDefault();
   }
   render() {
-    const { userName, message } = this.state;
+    const { userName, message, flavor } = this.state;
     return (
       <form onSubmit={this.onSubmit}>
         <label htmlFor="userName">
@@ -53,6 +57,16 @@ class Form extends Component {
             value={userName}
             onChange={this.handleChange}
           />
+        </label>
+        <label htmlFor="flavor" onChange={this.handleChange}>
+          Select Your Favorite Item:
+          <select id="flavor" value={flavor} onChange={this.handleChange}>
+            <option value="Choose">Choose</option>
+            <option value="grapefruit">Grapefruit</option>
+            <option value="lime">Lime</option>
+            <option value="coconut">Coconut</option>
+            <option value="mango">Mango</option>
+          </select>
         </label>
         <label htmlFor="description">
           Message:
