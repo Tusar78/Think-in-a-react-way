@@ -47,8 +47,8 @@ class Form extends Component {
     const { userName, message, flavor, isGoing, numberOfGuests } = this.state;
     const isUserName = userName ? `A name was submitted ${userName}` : "";
     console.log(`${isUserName} and i love ${flavor}${isGoing}. Number of guests is : ${numberOfGuests} ${message}`);
-    this.setState({ userName: "" });
     event.preventDefault();
+    this.setState({ userName: "" });
   }
   render() {
     const { userName, message, flavor, isGoing, numberOfGuests } = this.state;
