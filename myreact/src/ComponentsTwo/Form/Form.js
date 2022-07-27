@@ -20,7 +20,11 @@ class Form extends Component {
   onSubmit(event) {
     const { userName } = this.state;
     event.preventDefault();
-    console.log(`A name was submitted ${userName}`);
+    const isUserName = userName 
+      ? `A name was submitted ${userName}`
+      : '';
+    console.log(isUserName);
+    this.setState({userName: ''})
   }
   render() {
     const { userName } = this.state;
