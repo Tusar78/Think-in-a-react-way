@@ -8,6 +8,8 @@ class Form extends Component {
       userName: "",
       message: "",
       flavor: "",
+      isGoing: true,
+      numberOfGuests: 2,
     };
     this.handleChange = this.handleChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
@@ -44,7 +46,7 @@ class Form extends Component {
     event.preventDefault();
   }
   render() {
-    const { userName, message, flavor } = this.state;
+    const { userName, message, flavor, isGoing, numberOfGuests } = this.state;
     return (
       <form onSubmit={this.onSubmit}>
         <label htmlFor="userName">
@@ -68,6 +70,25 @@ class Form extends Component {
             <option value="mango">Mango</option>
           </select>
         </label>
+        <label htmlFor="isGoing">
+          Is Going:
+          <input
+            type="checkbox"
+            name="isGoing"
+            id="isGoing"
+            checked={isGoing}
+          />
+        </label>
+
+        <label htmlFor="numberOfGuests">
+          Number of guests:
+          <input
+            type="number"
+            name="numberOfGuests"
+            id="numberOfGuests"
+            value={numberOfGuests}
+          />
+        </label>
         <label htmlFor="description">
           Message:
           <textarea
@@ -78,6 +99,7 @@ class Form extends Component {
             onChange={this.handleChange}
           ></textarea>
         </label>
+
         <input type="submit" value="Submit" />
       </form>
     );

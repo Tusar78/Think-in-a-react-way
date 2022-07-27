@@ -50,6 +50,11 @@ button {
   padding: 1rem;
 }
 
+label {
+  display: block;
+  margin-bottom: .5rem;
+}
+
 input,
 textarea,
 select {
@@ -61,6 +66,10 @@ select {
   outline: none;
   border-radius: .2rem;
   margin-bottom: .5rem;
+}
+
+input[type='checkbox'] {
+  display: initial;
 }
 
 input[type='submit'] {
