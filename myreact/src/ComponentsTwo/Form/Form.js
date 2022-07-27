@@ -1,20 +1,46 @@
-import React from 'react';
+import React, { Component } from "react";
 
-const Form = () => {
-  const handleSubmit = (e, val) => {
-    e.preventDefault();
+class Form extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = { userName: "" };
+    this.handleChange = this.handleChange.bind(this);
+    this.onSubmit = this.onSubmit.bind(this)
   }
-  return (
-    <>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="name">
-          Name: 
-          <input type="text" name="name" id="name" />  
-        </label>  
+
+  handleChange(event) {
+    this.setState((prevState, props) => {
+      return {
+        userName: event.target.value,
+      };
+    });
+  }
+
+  onSubmit(event) {
+    const { userName } = this.state;
+    event.preventDefault();
+    console.log(`A name was submitted ${userName}`);
+  }
+  render() {
+    const { userName } = this.state;
+    return (
+      <form onSubmit={this.onSubmit}>
+        <label htmlFor="userName">
+          Name:
+          <input
+            type="text"
+            name="name"
+            id="userName"
+            placeholder="Enter you name."
+            value={userName}
+            onChange={this.handleChange}
+          />
+        </label>
         <input type="submit" value="Submit" />
-      </form> 
-    </>
-  );
-};
+      </form>
+    );
+  }
+}
 
 export default Form;
