@@ -44,7 +44,7 @@ class Form extends Component {
   }
 
   onSubmit(event) {
-    const { userName, message, flavor } = this.state;
+    const { userName, message, flavor, isGoing, numberOfGuests } = this.state;
     const isUserName = userName ? `A name was submitted ${userName}` : "";
     console.log(`${isUserName} and i love ${flavor}. ${message}`);
     this.setState({ userName: "" });
