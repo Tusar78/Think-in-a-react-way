@@ -4,30 +4,40 @@ class Form extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { userName: "" };
+    this.state = {
+      userName: "",
+      message: "",
+    };
     this.handleChange = this.handleChange.bind(this);
-    this.onSubmit = this.onSubmit.bind(this)
+    this.onSubmit = this.onSubmit.bind(this);
   }
 
   handleChange(event) {
-    this.setState((prevState, props) => {
-      return {
-        userName: event.target.value,
-      };
-    });
+    console.log(event.target);
+    console.log(event.target.type);
+    const eventType = event.target.type;
+    switch (eventType) {
+      case "text":
+        this.setState((prevState, props) => {
+          return {
+            userName: event.target.value,
+          };
+        });
+        break;
+      default:
+        break;
+    }
   }
 
   onSubmit(event) {
     const { userName } = this.state;
     event.preventDefault();
-    const isUserName = userName 
-      ? `A name was submitted ${userName}`
-      : '';
+    const isUserName = userName ? `A name was submitted ${userName}` : "";
     console.log(isUserName);
-    this.setState({userName: ''})
+    this.setState({ userName: "" });
   }
   render() {
-    const { userName } = this.state;
+    const { userName, message } = this.state;
     return (
       <form onSubmit={this.onSubmit}>
         <label htmlFor="userName">
@@ -40,6 +50,15 @@ class Form extends Component {
             value={userName}
             onChange={this.handleChange}
           />
+        </label>
+        <label htmlFor="description">
+          Message:
+          <textarea
+            name="message"
+            id="description"
+            value={message}
+            onChange={this.handleChange}
+          ></textarea>
         </label>
         <input type="submit" value="Submit" />
       </form>
