@@ -13,7 +13,7 @@ class Form extends Component {
   }
 
   handleChange(event) {
-    console.log(event.target);
+    // console.log(event.target);
     console.log(event.target.type);
     const eventType = event.target.type;
     switch (eventType) {
@@ -24,16 +24,19 @@ class Form extends Component {
           };
         });
         break;
+      case "textarea":
+        this.setState({ message: event.target.value });
+        break;
       default:
         break;
     }
   }
 
   onSubmit(event) {
-    const { userName } = this.state;
+    const { userName, message } = this.state;
     event.preventDefault();
     const isUserName = userName ? `A name was submitted ${userName}` : "";
-    console.log(isUserName);
+    console.log(`${isUserName} and ${message}`);
     this.setState({ userName: "" });
   }
   render() {
@@ -56,6 +59,7 @@ class Form extends Component {
           <textarea
             name="message"
             id="description"
+            placeholder="Enter your Message."
             value={message}
             onChange={this.handleChange}
           ></textarea>
