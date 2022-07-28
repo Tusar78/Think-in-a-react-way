@@ -1,3 +1,21 @@
+// export function toCelsius(fahrenheit) {
+//   return ((fahrenheit - 32) * 5) / 9;
+// }
+
+// export function toFahrenheit(celsius) {
+//   return (celsius * 9) / 5 + 32;
+// }
+
+// export function converter(temperature, convertTo) {
+//   const input = parseFloat(temperature);
+//   if (Number.isNaN(input)) {
+//     return "";
+//   }
+//   const output = convertTo(input);
+//   const rounded = Math.round(output * 1000) / 1000;
+//   return rounded;
+// }
+
 export function toCelsius(fahrenheit) {
   return ((fahrenheit - 32) * 5) / 9;
 }
@@ -6,12 +24,13 @@ export function toFahrenheit(celsius) {
   return (celsius * 9) / 5 + 32;
 }
 
-export function converter(temperature, convertTo) {
+export function tryConvert(temperature, covert) {
   const input = parseFloat(temperature);
   if (Number.isNaN(input)) {
-    return "";
+    return '';
   }
-  const output = convertTo(input);
+
+  const output = covert(input);
   const rounded = Math.round(output * 1000) / 1000;
-  return rounded;
+  return rounded.toString();
 }
