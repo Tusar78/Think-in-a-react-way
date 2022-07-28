@@ -6,19 +6,8 @@ const scaleName = {
 };
 
 class TemperatureInput extends Component {
-  constructor(props) {
-    super(props);
-
-    this.handleChange = this.handleChange.bind(this);
-    this.state = { temperature: "" };
-  }
-
-  handleChange(e) {
-    this.setState({ temperature: e.target.value });
-  }
   render() {
-    const { temperature } = this.state;
-    const { scale } = this.props;
+    const { scale, temperature, onTemperatureChange } = this.props;
     return (
       <>
         <fieldset>
@@ -29,7 +18,7 @@ class TemperatureInput extends Component {
             id="celsius"
             placeholder= {scaleName[scale]}
             value={temperature}
-            onChange={this.handleChange}
+            onChange={(e) => onTemperatureChange(e, scale)}
           />
         </fieldset>
       </>
