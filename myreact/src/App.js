@@ -1,11 +1,11 @@
 import React from "react";
 import './App.css'
-import Text from "./Components/Emoji/Text";
+import Shoes from "./ComponentsThree/Shoes/Shoes";
 
 const App = () => {
   return (
     <div className="container">
-      <Text />
+      <Shoes />
     </div>
   );
 };
