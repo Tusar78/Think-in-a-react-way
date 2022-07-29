@@ -12,7 +12,7 @@ const Cosmetics = () => {
     <div>
       <h2>Collection of Cosmetics:</h2>
       {
-        cosmetics.map(cosmetic => <Cosmetic cosmetic={cosmetic} />)
+        cosmetics.map(cosmetic => <Cosmetic key={cosmetic._id} cosmetic={cosmetic} />)
       }
     </div>
   );
