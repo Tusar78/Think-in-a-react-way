@@ -2,8 +2,8 @@ import React from "react";
 
 const Cosmetic = ({ cosmetic }) => {
   const { _id, name, balance } = cosmetic;
-  const adToCart = (balance) => {
-    console.log(`This product Balance: ${balance}`);
+  const adToCart = (id) => {
+    localStorage.setItem(id, 1)
   }
   return (
     <div className="display__input">
@@ -11,7 +11,7 @@ const Cosmetic = ({ cosmetic }) => {
       <p>Price: {balance}</p>
       <small>It's id: {_id}</small>
       <br />
-      <button onClick={() => adToCart(balance)}>Ad to cart</button>
+      <button onClick={() => adToCart(_id)}>Ad to cart</button>
     </div>
   );
 };
