@@ -1,5 +1,5 @@
 import React from "react";
-import { fakeDB } from "../../utilities/fakedb";
+import { deleteCart, fakeDB } from "../../utilities/fakedb";
 
 const Cosmetic = ({ cosmetic }) => {
   const { _id, name, balance } = cosmetic;
@@ -12,7 +12,8 @@ const Cosmetic = ({ cosmetic }) => {
       <p>Price: {balance}</p>
       <small>It's id: {_id}</small>
       <br />
-      <button onClick={() => adToCart(balance)}>Ad to cart</button>
+      <button onClick={() => adToCart(_id)}>Add to cart</button>
+      <button onClick={() => deleteCart(_id)}>Delete cart</button>
     </div>
   );
 };
