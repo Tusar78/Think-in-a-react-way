@@ -1,11 +1,11 @@
 import React from "react";
 import './App.css'
-import Shoes from "./ComponentsThree/Shoes/Shoes";
+import Cosmetics from "./ComponentsThree/Cosmetics/Cosmetics";
 
 const App = () => {
   return (
     <div className="container">
-      <Shoes />
+      <Cosmetics />
     </div>
   );
 };
