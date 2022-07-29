@@ -11,10 +11,18 @@
 // }
 
 const fakeDB = (id) => {
-  let shoppingCart = {};
+  let shoppingCart;
+
+  const storedCart = localStorage.getItem('shopping-cart');
+
+  if (storedCart) {
+    shoppingCart = JSON.parse(storedCart)
+    console.log(shoppingCart);
+  } else {
+    shoppingCart = {};
+  }
 
   const quantity = shoppingCart[id];
-  console.log(quantity);
   if (quantity) {
     const newQuantity = quantity + 1;
     shoppingCart[id] = newQuantity;

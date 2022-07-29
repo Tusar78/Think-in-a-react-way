@@ -12,7 +12,7 @@ const Cosmetic = ({ cosmetic }) => {
       <p>Price: {balance}</p>
       <small>It's id: {_id}</small>
       <br />
-      <button onClick={() => adToCart(_id)}>Ad to cart</button>
+      <button onClick={() => adToCart(balance)}>Ad to cart</button>
     </div>
   );
 };
