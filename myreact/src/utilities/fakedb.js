@@ -14,4 +14,8 @@ const fakeDB = (id) => {
   
 };
 
+const deleCart = (id) => {
+  
+}
+
 export { fakeDB };
