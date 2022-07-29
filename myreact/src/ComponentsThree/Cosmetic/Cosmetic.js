@@ -1,9 +1,10 @@
 import React from "react";
+import { fakeDB } from "../../utilities/fakedb";
 
 const Cosmetic = ({ cosmetic }) => {
   const { _id, name, balance } = cosmetic;
   const adToCart = (id) => {
-    localStorage.setItem(id, 1)
+    fakeDB(id)
   }
   return (
     <div className="display__input">
