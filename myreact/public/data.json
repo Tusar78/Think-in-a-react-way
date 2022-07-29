@@ -1,0 +1,72 @@
+[
+  {
+    "_id": "62e37dad7d9a61ec63152d12",
+    "balance": "$3,711.72",
+    "age": 26,
+    "name": "Angel Camacho",
+    "gender": "female",
+    "company": "HAWKSTER",
+    "email": "angelcamacho@hawkster.com",
+    "phone": "+1 (845) 534-3055"
+  },
+  {
+    "_id": "62e37dad33dac2ce62e5bb84",
+    "balance": "$1,450.59",
+    "age": 38,
+    "name": "Jordan Pugh",
+    "gender": "female",
+    "company": "BOINK",
+    "email": "jordanpugh@boink.com",
+    "phone": "+1 (939) 454-2171"
+  },
+  {
+    "_id": "62e37dad0841166aad3db559",
+    "balance": "$1,943.50",
+    "age": 29,
+    "name": "Rhea Valdez",
+    "gender": "female",
+    "company": "NETPLAX",
+    "email": "rheavaldez@netplax.com",
+    "phone": "+1 (832) 450-2832"
+  },
+  {
+    "_id": "62e37dad58beb5bbb22b9fa6",
+    "balance": "$1,342.07",
+    "age": 35,
+    "name": "Fuentes Spence",
+    "gender": "male",
+    "company": "FLUM",
+    "email": "fuentesspence@flum.com",
+    "phone": "+1 (968) 520-2611"
+  },
+  {
+    "_id": "62e37dade45f67120175223c",
+    "balance": "$1,358.48",
+    "age": 33,
+    "name": "Zelma Christensen",
+    "gender": "female",
+    "company": "ACCUFARM",
+    "email": "zelmachristensen@accufarm.com",
+    "phone": "+1 (804) 570-3287"
+  },
+  {
+    "_id": "62e37dade2640e4c31061ac4",
+    "balance": "$2,056.93",
+    "age": 24,
+    "name": "Letha Mosley",
+    "gender": "female",
+    "company": "ZERBINA",
+    "email": "lethamosley@zerbina.com",
+    "phone": "+1 (874) 409-2811"
+  },
+  {
+    "_id": "62e37dad607248ccfebb9bc1",
+    "balance": "$2,667.28",
+    "age": 24,
+    "name": "Tran Beck",
+    "gender": "male",
+    "company": "PURIA",
+    "email": "tranbeck@puria.com",
+    "phone": "+1 (895) 528-3118"
+  }
+]
