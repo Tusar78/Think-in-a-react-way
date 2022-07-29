@@ -1,12 +1,12 @@
 import React from "react";
 
 const Cosmetic = ({ cosmetic }) => {
-  const { id, name, price } = cosmetic;
+  const { _id, name, balance } = cosmetic;
   return (
     <div className="display__input">
       <h3>Product name: {name}</h3>
-      <p>Price: {price}</p>
-      <small>It's id: {id}</small>
+      <p>Price: {balance}</p>
+      <small>It's id: {_id}</small>
     </div>
   );
 };
