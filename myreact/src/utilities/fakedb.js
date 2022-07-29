@@ -30,7 +30,12 @@ const fakeDB = (id) => {
 };
 
 const deleteCart = (id) => {
-
+  const storedCart = localStorage.getItem('shopping-cart');
+  const shoppingCart = JSON.parse(storedCart);
+  if (id in shoppingCart) {
+    delete shoppingCart[id];
+    localStorage.setItem('shopping-cart', JSON.stringify(shoppingCart))
+  }
 }
 
 export { fakeDB, deleteCart };
