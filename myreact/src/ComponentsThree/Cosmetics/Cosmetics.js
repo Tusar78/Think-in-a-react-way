@@ -1,4 +1,5 @@
 import React from 'react';
+import Cosmetic from '../Cosmetic/Cosmetic';
 
 const Cosmetics = () => {
   const cosmetics = [
@@ -12,7 +13,7 @@ const Cosmetics = () => {
     <div>
       <h2>Collection of Cosmetics:</h2>
       {
-        cosmetics.map(cosmetic => console.log(cosmetic))
+        cosmetics.map(cosmetic => <Cosmetic cosmetic={cosmetic} />)
       }
     </div>
   );
