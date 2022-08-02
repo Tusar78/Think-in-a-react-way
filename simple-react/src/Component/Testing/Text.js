@@ -1,16 +1,8 @@
-import Emoji from "../Inheritance/Emoji";
+import React from "react";
 
-class Text extends Emoji {
-  // eslint-disable-next-line no-useless-constructor
-  constructor(props) {
-    super(props);
-  }
-  
-  render() {
-    const decoratedText = this.adEmoji('Hello World', '📙')
-    return super.render(decoratedText)    
-  }
-
-}
+const Text = ({ adEmoji }) => {
+  const text = 'I am JavaScript'
+  return <div>{adEmoji ? adEmoji('text', '😋') : text}</div>;
+};
 
 export default Text;

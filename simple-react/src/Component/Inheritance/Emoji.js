@@ -3,15 +3,10 @@ import React, { Component } from 'react';
 class Emoji extends Component {
   adEmoji = (text, emoji) => `${emoji} ${text} ${emoji}`;
 
-  render(overwrite) {
-    let text = 'I am the emoji component';
-    if (overwrite) {
-      text = overwrite;
-    }
-    
+  render() {
     return (
-      <div>{text}</div>
-    );
+      this.props.children({addEmoji: this.adEmoji})
+    );    
   }
 }
 
