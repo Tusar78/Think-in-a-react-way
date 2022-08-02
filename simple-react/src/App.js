@@ -7,7 +7,7 @@ function App() {
     <>
       <Click />
       <Hover />
-      <User name={(isLoggedIn) => isLoggedIn ? 'Tusar' : 'Foinni'}/>
+      <User render={(isLoggedIn) => isLoggedIn ? 'Tusar' : 'Foinni'}/>
     </>
   );
 }
