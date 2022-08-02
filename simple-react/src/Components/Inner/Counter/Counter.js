@@ -7,9 +7,13 @@ class Counter extends Component {
     this.setState((prevState, props) => ({count: prevState.count + 1}));
   }  
   render() {
-    const { render } = this.props;
+    // const { render } = this.props;
+    // const { count } = this.state;
+    // return render(count, this.incrementCount);
+
+    const { children } = this.props;
     const { count } = this.state;
-    return render(count, this.incrementCount);
+    return children(count, this.incrementCount);
   }
 }
 
